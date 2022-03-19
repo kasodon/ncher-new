@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "HUBBY";
+  src: local("HUBBY"), url(../../assets/fonts/HUBBY.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CORDION";
+  src: local("CORDION"), url(../../assets/fonts/CORDION.ttf) format("truetype");
+}
+
+body {
+  font-family: "HUBBY", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-grey-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: $color-grey-dark-3;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 60px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 2.3rem;
+    line-height: 34px;
+}
+
+h4 {
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+
+a {
+    text-decoration: none;
+    font-family: "HUBBY", Arial, Helvetica, sans-serif;
+}
