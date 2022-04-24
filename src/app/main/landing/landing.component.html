@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="content">
             <h1 class="u-margin-bottom-small">Transformative grassroot innovation for health and <span class="deco">climate</span> change</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio deleniti id natus. Reiciendis, nobis consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, explicabo? Optio eaque vero laboriosam quod sunt.</p>
+            <p>Nigeria Coalition for Eco-Social Health Research (NCEHR) group, a transformative grassroot innovation, is a Nigerian based inter-disciplinary and inter university collaboration that monitors the link between health and climate change through indicators highlighting the threats to health and climate change.</p>
         </div>
         <div class="illustration">
             <img src="assets/img/Hero-Image.svg" alt="">
@@ -21,7 +21,7 @@
                 <p><span>NCEHR</span> is a Nigerian based inter-disciplinary and inter university collaboration that monitors the link between health and climate change through various indicators that highlight the threats to health, and proffering solutions with community members as co-partners, co-learners, and co-owners of knowledge produced from the group.</p>
             </div>
         </div>
-        <a class="btn btn--secondary u-margin-top-medium" href="#">Learn More</a>
+        <a class="btn btn--secondary u-margin-top-medium" [routerLink]="['/about']">Learn More</a>
     </section>
     <section class="qoutes">
         <div class="qoute__box-1">
@@ -78,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section class="publication">
+    <section class="publication" *ngIf="posts">
         <div class="publication_header">
             <h2>Recent Publications</h2>
         </div>
@@ -87,14 +87,14 @@
                 <div class="img-box">
                     <img src="assets/img/bitmap.png" alt=""> 
                 </div>
-                <div class="tag-box"><p>article</p></div>
+                <div class="tag-box"><p>publication</p></div>
                 <div class="text-box">
-                    <h3>The Journey of a thousand mile</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, numquam. Lorem ipsum dolor sit amet.</p>
+                    <h3>{{ posts[0]?.title.rendered.length > 29 ? (posts[0]?.title.rendered | slice:0:29)+'...' : posts[0]?.title.rendered}}</h3>
+                    <p>{{ posts[0]?.excerpt.rendered.length > 142 ? (posts[0]?.excerpt.rendered | slice:0:142)+'...' : posts[0]?.excerpt.rendered}}</p>
                 </div>
                 <div class="anchor-box">
                     <div class="link">
-                        <a href="#">Read more</a>
+                        <a [href]="posts[0]?.link" target="_blank">Read more</a>
                     <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.5969 1.40317L28.2665 8.07339C28.354 8.16081 28.4032 8.27945 28.4032 8.40317C28.4032 8.52689 28.354 8.64553 28.2665 8.73295L21.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path opacity="0.634928" d="M11.5969 1.40317L18.2665 8.07339C18.354 8.16081 18.4032 8.27945 18.4032 8.40317C18.4032 8.52689 18.354 8.64553 18.2665 8.73295L11.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -107,14 +107,14 @@
                 <div class="img-box">
                     <img src="assets/img/bitmap.png" alt="">
                 </div>
-                <div class="tag-box"><p>event</p></div>
+                <div class="tag-box"><p>publication</p></div>
                 <div class="text-box">
-                    <h3>The Journey of a thousand mile</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, numquam. Lorem ipsum dolor sit amet.</p>
+                    <h3>{{ posts[1]?.title.rendered.length > 29 ? (posts[1]?.title.rendered | slice:0:29)+'...' : posts[1]?.title.rendered}}</h3>
+                    <p>{{ posts[1]?.excerpt.rendered.length > 142 ? (posts[1]?.excerpt.rendered | slice:0:142)+'...' : posts[1]?.excerpt.rendered}}</p>
                 </div>
                 <div class="anchor-box">
                     <div class="link">
-                        <a href="#">Read more</a>
+                        <a [href]="posts[1]?.link" target="_blank">Read more</a>
                     <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.5969 1.40317L28.2665 8.07339C28.354 8.16081 28.4032 8.27945 28.4032 8.40317C28.4032 8.52689 28.354 8.64553 28.2665 8.73295L21.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path opacity="0.634928" d="M11.5969 1.40317L18.2665 8.07339C18.354 8.16081 18.4032 8.27945 18.4032 8.40317C18.4032 8.52689 18.354 8.64553 18.2665 8.73295L11.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -127,14 +127,14 @@
                 <div class="img-box">
                     <img src="assets/img/bitmap.png" alt="">
                 </div>
-                <div class="tag-box"><p>program</p></div>
+                <div class="tag-box"><p>publication</p></div>
                 <div class="text-box">
-                    <h3>The Journey of a thousand mile</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, numquam. Lorem ipsum dolor sit amet.</p>
+                    <h3>{{ posts[2]?.title.rendered.length > 29 ? (posts[2]?.title.rendered | slice:0:29)+'...' : posts[2]?.title.rendered}}</h3>
+                    <p>{{ posts[2]?.excerpt.rendered.length > 142 ? (posts[2]?.excerpt.rendered | slice:0:142)+'...' : posts[2]?.excerpt.rendered}}</p>
                 </div>
                 <div class="anchor-box">
                     <div class="link">
-                        <a href="#">Read more</a>
+                        <a [href]="posts[2]?.link" target="_blank">Read more</a>
                     <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.5969 1.40317L28.2665 8.07339C28.354 8.16081 28.4032 8.27945 28.4032 8.40317C28.4032 8.52689 28.354 8.64553 28.2665 8.73295L21.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path opacity="0.634928" d="M11.5969 1.40317L18.2665 8.07339C18.354 8.16081 18.4032 8.27945 18.4032 8.40317C18.4032 8.52689 18.354 8.64553 18.2665 8.73295L11.5969 15.4032" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -145,7 +145,7 @@
             </div>
         </div>
         <div class="see_more">
-            <a href="#">View All &rarr;</a>
+            <a href="https://resources.ncehr.org/category/publications/" target="_blank">View All &rarr;</a>
         </div>
     </section>
 </div>

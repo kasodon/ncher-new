@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchService } from '../fetch.service';
 
 @Component({
   selector: 'app-landing',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+    posts: any;
 
-  constructor() { }
+  constructor(private service: FetchService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.service.getBlog().subscribe((data) => {
+        this.posts = data;
+        return this.posts;
+    });
   }
 
 }
